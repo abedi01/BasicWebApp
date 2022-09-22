@@ -27,6 +27,7 @@ public class QueryProcessorTest {
 
     @Test
     public void whichIsLargest() throws Exception {
+        System.out.print(queryProcessor.process("which of the following numbers is the largest: 71, 188"));
         assertThat(queryProcessor.process("which of the following numbers is the largest: 71, 188"), is("188"));
     }
 

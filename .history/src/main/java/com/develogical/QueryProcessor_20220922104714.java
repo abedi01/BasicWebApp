@@ -11,17 +11,15 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("what is your name")) {
             return "Hey";
         }
-
-        if (query.toLowerCase().contains("which of the following numbers is the largest")) {
-            String[] parts = query.split(" ");
-
-            int num1 = Integer.parseInt(parts[parts.length - 1]);
-            int num2 = Integer.parseInt(parts[parts.length - 2].substring(0, parts[parts.length - 2].length()-1));
-
-            return Integer.toString(Integer.max(num1, num2));
-        }
-
         return "";
 
+        if (query.toLowerCase().contains("which of the following is the largest")) {
+            String[] parts = input.split("%20");
+
+            int num1 = Integer.parseInt(parts[-1]);
+            int num2 = Integer.parseInt(parts[-2].substring(0, parts[-2].length()-2));
+
+            return max(num1, num2);
+        }
     }
 }

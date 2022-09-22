@@ -15,8 +15,8 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("which of the following numbers is the largest")) {
             String[] parts = query.split(" ");
 
-            int num1 = Integer.parseInt(parts[parts.length - 1]);
-            int num2 = Integer.parseInt(parts[parts.length - 2].substring(0, parts[parts.length - 2].length()-1));
+            int num1 = Integer.parseInt(parts[parts.length() - 1]);
+            int num2 = Integer.parseInt(parts[parts.length() - 2].substring(0, parts[-2].length()-2));
 
             return Integer.toString(Integer.max(num1, num2));
         }
