@@ -12,5 +12,14 @@ public class QueryProcessor {
             return "Hey";
         }
         return "";
+
+        if (query.toLowerCase().contains("which of the following is the largest")) {
+            String[] parts = input.split("%20");
+
+            int num1 = Integer.parseInt(parts[-1]);
+            int num2 = Integer.parseInt(parts[-2].substring(0, parts[-2].length()-2));
+
+            return max(num1, num2);
+        }
     }
 }
