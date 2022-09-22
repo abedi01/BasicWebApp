@@ -26,6 +26,6 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "arjan_bedi_unique"
+          heroku_app_name: "arjan-bedi-unique"
           heroku_email: "abedi@andrew.cmu.edu"
 
